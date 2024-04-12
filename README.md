@@ -1,8 +1,9 @@
-# React + Vite
+# EssentialUI Sidebar Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, customizable sidebar component for React applications.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Lightweight**: Optimized bundle with minimal dependencies.
+- **Customizable**: Supports theming and easy to integrate with existing projects.
+- **Responsive**: Adaptive to various screen sizes.

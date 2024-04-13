@@ -2,7 +2,26 @@
   "name": "essentialui",
   "private": false,
   "version": "0.1.0",
+  "main": "dist/essentialui.umd.js",
+  "module": "dist/essentialui.es.js",
   "type": "module",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "react",
+    "ui",
+    "sidebar",
+    "component",
+    "theme"
+  ],
+  "author": "Maninderjit Johar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maninderjit-johar/essentialui"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

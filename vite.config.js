@@ -5,9 +5,10 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: "./src/main.jsx",
-      name: "essentialUI",
-      fileName: (format) => `essentialUI.${format}.js`,
+      entry: "src/components/index.js",
+      name: "EssentialUI",
+      formats: ["es", "umd"],
+      fileName: (format) => `essentialui.${format}.js`,
     },
     rollupOptions: {
       // Make sure to externalize deps that shouldn't be bundled

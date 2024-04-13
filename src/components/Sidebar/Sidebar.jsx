@@ -3,6 +3,7 @@ import "./Sidebar.css";
 import { useTheme } from "../../context/ThemeContext";
 
 const Sidebar = ({ mode: initialMode }) => {
+  // console.log("Rendering Sidebar");
   const { theme } = useTheme();
   const [mode, setMode] = useState(initialMode || "full");
   const [showIcons, setShowIcons] = useState(true);

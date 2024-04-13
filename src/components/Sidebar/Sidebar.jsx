@@ -70,65 +70,79 @@ const Sidebar = ({ mode: initialMode }) => {
 
   if (mode === "collapsed") {
     return (
-      <div className="hamburger-menu" onClick={toggleSidebar}>
-        ☰
+      <div
+        className="sidebar-nav"
+        style={{ "--nav-background": theme.primary }}
+      >
+        <div className="hamburger-menu" onClick={toggleSidebar}>
+          ☰
+        </div>
       </div>
     );
   }
 
   return (
-    <div
-      className={`sidebar ${mode}`}
-      style={{ backgroundColor: theme.primary }}
-    >
+    <>
       {lessThan768 && (
-        <div className="close-sidebar" onClick={toggleSidebar}>
-          X
-        </div>
+        <div
+          className="sidebar-nav"
+          style={{ "--nav-background": theme.primary }}
+        ></div>
       )}
-      {mode === "full" && <div className="sidebar-logo">Logo</div>}
 
-      <ul className="sidebar-menu">
-        <li
-          className="menu-item"
-          style={{ "--hover-background": theme.primary }}
-        >
-          {showIcons && (
-            <span role="img" aria-label="home">
-              🏠
-            </span>
-          )}
-          <span className="menu-text">Home</span>
-        </li>
-        <li
-          className="menu-item"
-          style={{ "--hover-background": theme.primary }}
-        >
-          {showIcons && (
-            <span role="img" aria-label="about">
-              ℹ️
-            </span>
-          )}
-          <span className="menu-text">About</span>
-        </li>
-        <li
-          className="menu-item"
-          style={{ "--hover-background": theme.primary }}
-        >
-          {showIcons && (
-            <span role="img" aria-label="contact">
-              📞
-            </span>
-          )}
-          <span className="menu-text">Contact</span>
-        </li>
-      </ul>
-      {!lessThan768 && (
-        <div className="sidebar-toggle" onClick={toggleMode}>
-          {mode === "icon" ? "➡️" : "⬅️"}
-        </div>
-      )}
-    </div>
+      <div
+        className={`sidebar ${mode}`}
+        style={{ backgroundColor: theme.primary }}
+      >
+        {lessThan768 && (
+          <div className="close-sidebar" onClick={toggleSidebar}>
+            X
+          </div>
+        )}
+        {mode === "full" && <div className="sidebar-logo">Logo</div>}
+
+        <ul className="sidebar-menu">
+          <li
+            className="menu-item"
+            style={{ "--hover-background": theme.primary }}
+          >
+            {showIcons && (
+              <span role="img" aria-label="home">
+                🏠
+              </span>
+            )}
+            <span className="menu-text">Home</span>
+          </li>
+          <li
+            className="menu-item"
+            style={{ "--hover-background": theme.primary }}
+          >
+            {showIcons && (
+              <span role="img" aria-label="about">
+                ℹ️
+              </span>
+            )}
+            <span className="menu-text">About</span>
+          </li>
+          <li
+            className="menu-item"
+            style={{ "--hover-background": theme.primary }}
+          >
+            {showIcons && (
+              <span role="img" aria-label="contact">
+                📞
+              </span>
+            )}
+            <span className="menu-text">Contact</span>
+          </li>
+        </ul>
+        {!lessThan768 && (
+          <div className="sidebar-toggle" onClick={toggleMode}>
+            {mode === "icon" ? "➡️" : "⬅️"}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

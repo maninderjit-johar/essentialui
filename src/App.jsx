@@ -12,10 +12,10 @@ const App = () => {
         {" "}
         {/* corrected '100lvh' to '100vh' */}
         <Sidebar />
-        <main style={{ flex: 1, padding: "1rem", color: "#fff" }}>
+        {/* <main style={{ flex: 1, padding: "1rem", color: "#fff" }}>
           <h1>Main Content</h1>
           <p>This is the main area of the application.</p>
-        </main>
+        </main> */}
       </div>
     </ThemeProvider>
   );

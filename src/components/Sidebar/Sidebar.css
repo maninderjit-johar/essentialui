@@ -84,15 +84,31 @@ ul {
   margin-top: auto;
 }
 
+/* General styles for the sidebar navigation, visible on smaller screens */
+.sidebar-nav {
+  display: block; /* Ensure it's always displayed by default */
+  background-color: var(--nav-background);
+  height: 60px;
+  width: 100vw;
+  position: fixed; /* Make sure it's fixed at the top */
+  top: 0;
+  left: 0;
+  z-index: 500; /* High enough z-index to stay on top */
+  transition: transform 0.5s ease;
+}
+
+/* Hamburger menu icon styling */
 .hamburger-menu {
-  display: block;
-  position: fixed;
-  top: 10px;
-  left: 10px;
+  color: #fff;
   font-size: 30px;
   cursor: pointer;
-  z-index: 500;
-  transform: translateX(-10%);
-  transition: transform 0.5s ease;
-  padding: 0rem 1rem;
+  padding: 15px; /* Adjust padding to vertically center the icon if needed */
+}
+
+/* Hide the navigation bar on larger screens or based on state */
+@media (min-width: 768px) {
+  /* Adjust this breakpoint to your needs */
+  .sidebar-nav {
+    display: none; /* Hide the navbar on larger screens */
+  }
 }
